@@ -48,7 +48,12 @@ const updateArticleService = async (articleBodySchema: TArticle) => {
 
   if (error) throw Error('Invalid body schema. Correct and try again.');
 
-  const result = await updateArticle(articleBodySchema);
+  const article: TArticle = {
+    ...articleBodySchema,
+    updatedAt: new Date(),
+  };
+
+  const result = await updateArticle(article);
 
   if (!result) throw Error('No updated article');
 
@@ -75,4 +80,12 @@ const getArticleByIdService = async (articleId: string) => {
   if (!result) throw Error('No found article');
 
   return result;
+};
+
+module.exports = {
+  createArticleService,
+  updateArticleService,
+  deleteArticleService,
+  getArticlesAllService,
+  getArticleByIdService,
 };
