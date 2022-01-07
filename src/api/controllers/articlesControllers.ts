@@ -4,7 +4,7 @@ const {
   deleteArticleService,
   getArticlesAllService,
   getArticleByIdService,
-} = require('../articlesServices');
+} = require('../services/articlesServices');
 
 const createArticleController = async (req: any, _res: any) => {
   const { body } = req;
