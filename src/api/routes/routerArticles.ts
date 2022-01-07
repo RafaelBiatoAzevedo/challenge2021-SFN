@@ -7,7 +7,7 @@ const {
   deleteArticleController,
   getArticlesAllController,
   getArticleByIdController,
-} = require('../articlesControllers');
+} = require('../controllers/articlesControllers');
 
 const routerArticles = express.Router();
 
