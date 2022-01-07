@@ -1,6 +1,8 @@
 import express from 'express';
 const rescue = require('express-rescue');
 
+const { articlesErrors } = require('../middlewares/errors');
+
 const {
   createArticleController,
   updateArticleController,
@@ -17,23 +19,25 @@ routerArticles.get(
 );
 
 routerArticles.get(
-  '/articles/:id',
+  '/:id',
   rescue((req: any, res: any) => getArticleByIdController(req, res))
 );
 
 routerArticles.post(
-  '/articles',
+  '/',
   rescue((req: any, res: any) => createArticleController(req, res))
 );
 
 routerArticles.put(
-  '/articles/:id',
+  '/:id',
   rescue((req: any, res: any) => updateArticleController(req, res))
 );
 
 routerArticles.delete(
-  '/articles/:id',
+  '/:id',
   rescue((req: any, res: any) => deleteArticleController(req, res))
 );
+
+routerArticles.use(articlesErrors);
 
 module.exports = routerArticles;

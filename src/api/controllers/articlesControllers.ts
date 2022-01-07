@@ -6,43 +6,43 @@ const {
   getArticleByIdService,
 } = require('../services/articlesServices');
 
-const createArticleController = async (req: any, _res: any) => {
+const createArticleController = async (req: any, res: any) => {
   const { body } = req;
 
   const result = await createArticleService(body);
 
-  return result;
+  res.status(201).json(result);
 };
 
-const updateArticleController = async (req: any, _res: any) => {
+const updateArticleController = async (req: any, res: any) => {
   const { id } = req.params;
   const { body } = req;
 
   const result = await updateArticleService(id, body);
 
-  return result;
+  res.status(200).json(result);
 };
 
-const deleteArticleController = async (req: any, _res: any) => {
+const deleteArticleController = async (req: any, res: any) => {
   const { id } = req.params;
 
   const result = await deleteArticleService(id);
 
-  return result;
+  res.status(200).json(result);
 };
 
-const getArticlesAllController = async (req: any, _res: any) => {
+const getArticlesAllController = async (req: any, res: any) => {
   const result = await getArticlesAllService();
 
-  return result;
+  res.status(200).json(result);
 };
 
-const getArticleByIdController = async (req: any, _res: any) => {
+const getArticleByIdController = async (req: any, res: any) => {
   const { id } = req.params;
 
   const result = await getArticleByIdService(id);
 
-  return result;
+  res.status(200).json(result);
 };
 
 module.exports = {

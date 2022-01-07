@@ -14,11 +14,11 @@ const schema = Joi.object({
   _id: Joi.string(),
   id: Joi.string(),
   featured: Joi.boolean(),
-  title: Joi.string(),
-  url: Joi.string(),
-  imageUrl: Joi.string(),
-  newsSite: Joi.string(),
-  sumary: Joi.string(),
+  title: Joi.string().required(),
+  url: Joi.string().required(),
+  imageUrl: Joi.string().required(),
+  newsSite: Joi.string().required(),
+  sumary: Joi.string().required(),
   publishedAt: Joi.date(),
   updatedAt: Joi.date(),
   launches: Joi.array(),
@@ -43,8 +43,12 @@ const createArticleService = async (articleBodySchema: TArticle) => {
   return result;
 };
 
-const updateArticleService = async (articleBodySchema: TArticle) => {
+const updateArticleService = async (
+  articleId: string,
+  articleBodySchema: TArticle
+) => {
   const { error } = schema.validate(articleBodySchema);
+  console.log(error);
 
   if (error) throw Error('Invalid body schema. Correct and try again.');
 
@@ -53,7 +57,7 @@ const updateArticleService = async (articleBodySchema: TArticle) => {
     updatedAt: new Date(),
   };
 
-  const result = await updateArticle(article);
+  const result = await updateArticle(articleId, article);
 
   if (!result) throw Error('No updated article');
 
@@ -65,7 +69,7 @@ const deleteArticleService = async (articleId: string) => {
 
   if (!result) throw Error('No delete article');
 
-  return result;
+  return { message: 'Article deleted' };
 };
 
 const getArticlesAllService = async () => {

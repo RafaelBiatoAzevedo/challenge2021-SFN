@@ -3,6 +3,7 @@ import bodyParse from 'body-parser';
 const cors = require('cors');
 
 const app = express();
+const { responseError } = require('./middlewares/errors');
 const routes = require('./routes');
 
 app.use(cors());
@@ -15,5 +16,7 @@ app.get('/', (_req, res) =>
 );
 
 app.use('/articles', routes.routerArticles);
+
+app.use(responseError);
 
 module.exports = app;
