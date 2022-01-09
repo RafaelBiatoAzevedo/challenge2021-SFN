@@ -1,4 +1,5 @@
 import { TArticle } from '../types/TArticle';
+import { TPagination } from '../types/TPagination';
 
 const {
   createArticle,
@@ -72,10 +73,19 @@ const deleteArticleService = async (articleId: string) => {
   return { message: 'Article deleted' };
 };
 
-const getArticlesAllService = async () => {
-  const result = await getArticlesAll();
+const getArticlesAllService = async (queryPagination: TPagination) => {
+  const pagination: TPagination = {
+    page: Number(queryPagination.page) || 1,
+    limit: Number(queryPagination.limit) || 20,
+  };
 
-  return result;
+  const result = await getArticlesAll(pagination);
+
+  return {
+    ...result,
+    page: pagination.page,
+    limit: pagination.limit,
+  };
 };
 
 const getArticleByIdService = async (articleId: string) => {
