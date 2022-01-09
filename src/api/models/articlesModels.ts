@@ -1,5 +1,6 @@
 import { TArticle } from '../types/TArticle';
-import connection from './connectionMongoDb';
+import { TPagination } from '../types/TPagination';
+const connection = require('./connectionMongoDb');
 
 const { ObjectId } = require('mongodb');
 
@@ -56,12 +57,23 @@ const deleteArticle = async (articleId: string) => {
   return result;
 };
 
-const getArticlesAll = async () => {
-  const result = await connection().then((db: any) =>
-    db.collection('articles').find({}).toArray()
+const getArticlesAll = async (pagination: TPagination) => {
+  const pagesCount = Math.ceil(
+    (await connection().then((db: any) =>
+      db.collection('articles').find({}).count()
+    )) / pagination.limit
   );
 
-  return result;
+  const result = await connection().then((db: any) =>
+    db
+      .collection('articles')
+      .find({})
+      .limit(pagination.limit)
+      .skip(pagination.page * pagination.limit)
+      .toArray()
+  );
+
+  return { data: result, pagesCount };
 };
 
 module.exports = {

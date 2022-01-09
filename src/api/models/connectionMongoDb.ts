@@ -11,10 +11,11 @@ let db: any = null;
 
 const connection = () => {
   if (db) return Promise.resolve(db);
+
   return MongoClient.connect(MONGO_DB_URL, OPTIONS).then((conn: any) => {
     db = conn.db('Challenge2021-SFN');
     return db;
   });
 };
 
-export default connection;
+module.exports = connection;

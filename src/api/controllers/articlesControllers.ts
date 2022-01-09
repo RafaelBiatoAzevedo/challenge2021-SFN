@@ -32,7 +32,8 @@ const deleteArticleController = async (req: any, res: any) => {
 };
 
 const getArticlesAllController = async (req: any, res: any) => {
-  const result = await getArticlesAllService();
+  const { query } = req;
+  const result = await getArticlesAllService(query);
 
   res.status(200).json(result);
 };
