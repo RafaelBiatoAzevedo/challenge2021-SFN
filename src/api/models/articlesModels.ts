@@ -40,8 +40,8 @@ const updateArticle = async (articleId: string, articleData: TArticle) => {
   );
 
   if (result.acknowledged) {
-    const orderUpdated = await getArticleById(articleId);
-    return orderUpdated;
+    const articleUpdated = await getArticleById(articleId);
+    return articleUpdated;
   }
 
   return null;
@@ -64,16 +64,16 @@ const getArticlesAll = async (pagination: TPagination) => {
     )) / pagination.limit
   );
 
-  const result = await connection().then((db: any) =>
+  const results = await connection().then((db: any) =>
     db
       .collection('articles')
-      .find({})
+      .find({}, { _id: 0 })
       .limit(pagination.limit)
       .skip(pagination.page * pagination.limit)
       .toArray()
   );
 
-  return { data: result, pagesCount };
+  return { pagesCount, data: results };
 };
 
 module.exports = {

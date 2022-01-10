@@ -2,17 +2,14 @@ import { TArticle } from '../types/TArticle';
 import { TPagination } from '../types/TPagination';
 const connection = require('./connectionMongoDb');
 const { getArticlesAll } = require('./articlesModels');
-const axios = require('axios').default;
+const apiSFN = require('../../axios/createAxios');
 
 const fetchAllArticles = async (): Promise<TArticle[]> => {
-  const { data: articlesCount } = await axios.get(
-    'https://api.spaceflightnewsapi.net/v3/articles/count'
-  );
+  const { data: articlesCount } = await apiSFN.get('/articles/count');
 
-  const { data: articles } = await axios.get(
-    'https://api.spaceflightnewsapi.net/v3/articles',
-    { params: { _limit: articlesCount } }
-  );
+  const { data: articles } = await apiSFN.get('/articles', {
+    params: { _limit: articlesCount },
+  });
 
   return articles;
 };
@@ -22,11 +19,19 @@ const loadingData = async () => {
   const { data: articlesInDb } = await getArticlesAll(pagination);
 
   if (articlesInDb.length === 0) {
-    const articles = await fetchAllArticles();
+    console.log('DATABASE LOADING...');
+
+    const fechedArticles = await fetchAllArticles();
+    const articles = fechedArticles.map((article) => {
+      const { id, ...articleData } = article;
+      return articleData;
+    });
 
     await connection().then((db: any) =>
       db.collection('articles').insertMany(articles)
     );
+
+    console.log('OK DATABASE LOADED');
   }
 };
 

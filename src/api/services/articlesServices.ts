@@ -13,13 +13,12 @@ const Joi = require('joi');
 
 const schema = Joi.object({
   _id: Joi.string(),
-  id: Joi.string(),
   featured: Joi.boolean(),
-  title: Joi.string().required(),
-  url: Joi.string().required(),
-  imageUrl: Joi.string().required(),
-  newsSite: Joi.string().required(),
-  sumary: Joi.string().required(),
+  title: Joi.string(),
+  url: Joi.string(),
+  imageUrl: Joi.string(),
+  newsSite: Joi.string(),
+  sumary: Joi.string(),
   publishedAt: Joi.date(),
   updatedAt: Joi.date(),
   launches: Joi.array(),
@@ -33,6 +32,7 @@ const createArticleService = async (articleBodySchema: TArticle) => {
 
   const article: TArticle = {
     ...articleBodySchema,
+    featured: articleBodySchema.featured || false,
     publishedAt: new Date(),
     updatedAt: new Date(),
   };
@@ -49,7 +49,6 @@ const updateArticleService = async (
   articleBodySchema: TArticle
 ) => {
   const { error } = schema.validate(articleBodySchema);
-  console.log(error);
 
   if (error) throw Error('Invalid body schema. Correct and try again.');
 
@@ -82,9 +81,9 @@ const getArticlesAllService = async (queryPagination: TPagination) => {
   const result = await getArticlesAll(pagination);
 
   return {
-    ...result,
     page: pagination.page,
     limit: pagination.limit,
+    ...result,
   };
 };
 

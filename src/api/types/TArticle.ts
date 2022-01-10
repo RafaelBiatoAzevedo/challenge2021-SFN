@@ -1,11 +1,11 @@
 export type TPatternValue = {
-  id: string;
+  id: string | number;
   provider: string;
 };
 
 export type TArticle = {
   _id?: string;
-  id?: string;
+  id?: number;
   featured: boolean;
   title: string;
   url: string;
