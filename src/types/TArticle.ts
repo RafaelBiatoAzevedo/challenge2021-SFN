@@ -10,10 +10,10 @@ export type TArticle = {
   title: string;
   url: string;
   imageUrl: string;
-  newSite: string;
+  newsSite: string;
   sumary: string;
-  publishedAt: Date;
-  updatedAt: Date;
+  publishedAt: string;
+  updatedAt: string;
   launches: TPatternValue[];
   events: TPatternValue[];
 };

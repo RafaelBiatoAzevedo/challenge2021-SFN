@@ -67,7 +67,7 @@ const getArticlesAll = async (pagination: TPagination) => {
   const results = await connection().then((db: any) =>
     db
       .collection('articles')
-      .find({}, { _id: 0 })
+      .find({})
       .limit(pagination.limit)
       .skip(pagination.page * pagination.limit)
       .toArray()

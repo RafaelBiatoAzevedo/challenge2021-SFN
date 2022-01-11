@@ -2,7 +2,7 @@ import { TArticle } from '../types/TArticle';
 import { TPagination } from '../types/TPagination';
 const connection = require('./connectionMongoDb');
 const { getArticlesAll } = require('./articlesModels');
-const apiSFN = require('../../axios/createAxios');
+const apiSFN = require('../axios/createAxios');
 
 const fetchAllArticles = async (): Promise<TArticle[]> => {
   const { data: articlesCount } = await apiSFN.get('/articles/count');
@@ -35,4 +35,4 @@ const loadingData = async () => {
   }
 };
 
-module.exports = { loadingData };
+module.exports = loadingData;

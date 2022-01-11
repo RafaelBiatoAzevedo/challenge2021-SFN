@@ -1,7 +1,8 @@
 import express from 'express';
-const rescue = require('express-rescue');
 
-const { articlesErrors } = require('../middlewares/errors');
+const rescue = require('express-rescue');
+const routerArticles = express.Router();
+const { articlesErrors } = require('../../middlewares/errors');
 
 const {
   createArticleController,
@@ -9,9 +10,7 @@ const {
   deleteArticleController,
   getArticlesAllController,
   getArticleByIdController,
-} = require('../controllers/articlesControllers');
-
-const routerArticles = express.Router();
+} = require('../../controllers/articlesControllers');
 
 routerArticles.get(
   '/',
