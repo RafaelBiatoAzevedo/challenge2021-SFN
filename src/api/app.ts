@@ -1,13 +1,13 @@
 import express from 'express';
-import bodyParse from 'body-parser';
+import bodyParser from 'body-parser';
 const cors = require('cors');
 
 const app = express();
-const { responseError } = require('./middlewares/errors');
+const { responseError } = require('../middlewares/errors');
 const routes = require('./routes');
 
 app.use(cors());
-app.use(bodyParse.json());
+app.use(bodyParser.json());
 
 app.get('/', (_req, res) =>
   res

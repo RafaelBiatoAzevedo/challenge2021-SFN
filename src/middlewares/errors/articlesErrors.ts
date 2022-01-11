@@ -5,11 +5,7 @@ module.exports = (err: any, _req: any, _res: any, next: any) => {
     return next(newError);
   }
 
-  if (
-    err.message === 'No created article' ||
-    err.message === 'No updated article' ||
-    err.message === 'No delete article'
-  ) {
+  if (err.message === 'No created article') {
     const newError: any = new Error(err.message);
     newError.status = 409;
     return next(newError);

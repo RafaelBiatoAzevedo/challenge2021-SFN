@@ -1,9 +1,7 @@
 import { TArticle } from '../types/TArticle';
-import { TPagination } from '../types/TPagination';
 const connection = require('./connectionMongoDb');
 const moment = require('moment');
-const { getArticlesAll } = require('./articlesModels');
-const apiSFN = require('../../axios/createAxios');
+const apiSFN = require('../axios/createAxios');
 
 const yesterday = moment()
   .subtract(1, 'days')
@@ -39,7 +37,9 @@ const updateArticlesDaily = async () => {
     (arrayArticles: TArticle[], nextArticle: TArticle) => {
       if (
         !articlesYesterday.some(
-          (article: TArticle) => article.title === nextArticle.title
+          (article: TArticle) =>
+            article.title === nextArticle.title &&
+            article.publishedAt === nextArticle.publishedAt
         )
       ) {
         arrayArticles.push(nextArticle);

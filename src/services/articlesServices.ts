@@ -1,5 +1,8 @@
+import moment from 'moment';
 import { TArticle } from '../types/TArticle';
 import { TPagination } from '../types/TPagination';
+
+const Joi = require('joi');
 
 const {
   createArticle,
@@ -8,8 +11,6 @@ const {
   getArticlesAll,
   getArticleById,
 } = require('../models/articlesModels');
-
-const Joi = require('joi');
 
 const schema = Joi.object({
   _id: Joi.string(),
@@ -33,8 +34,10 @@ const createArticleService = async (articleBodySchema: TArticle) => {
   const article: TArticle = {
     ...articleBodySchema,
     featured: articleBodySchema.featured || false,
-    publishedAt: new Date(),
-    updatedAt: new Date(),
+    publishedAt: moment().format('YYYY-MM-DDTHH:mm:ss.SSS'),
+    updatedAt: moment().format('YYYY-MM-DDTHH:mm:ss.SSS'),
+    launches: articleBodySchema.launches || [],
+    events: articleBodySchema.events || [],
   };
 
   const result = await createArticle(article);
@@ -54,12 +57,12 @@ const updateArticleService = async (
 
   const article: TArticle = {
     ...articleBodySchema,
-    updatedAt: new Date(),
+    updatedAt: moment().format('YYYY-MM-DDTHH:mm:ss.SSS'),
   };
 
   const result = await updateArticle(articleId, article);
 
-  if (!result) throw Error('No updated article');
+  if (!result) throw Error('No found article');
 
   return result;
 };
@@ -67,7 +70,7 @@ const updateArticleService = async (
 const deleteArticleService = async (articleId: string) => {
   const result = await deleteArticle(articleId);
 
-  if (!result) throw Error('No delete article');
+  if (!result) throw Error('No found article');
 
   return { message: 'Article deleted' };
 };

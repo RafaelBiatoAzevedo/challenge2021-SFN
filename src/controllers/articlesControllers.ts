@@ -1,3 +1,4 @@
+import express from 'express';
 const {
   createArticleService,
   updateArticleService,
@@ -6,7 +7,10 @@ const {
   getArticleByIdService,
 } = require('../services/articlesServices');
 
-const createArticleController = async (req: any, res: any) => {
+const createArticleController = async (
+  req: express.Request,
+  res: express.Response
+) => {
   const { body } = req;
 
   const result = await createArticleService(body);
@@ -14,7 +18,10 @@ const createArticleController = async (req: any, res: any) => {
   res.status(201).json(result);
 };
 
-const updateArticleController = async (req: any, res: any) => {
+const updateArticleController = async (
+  req: express.Request,
+  res: express.Response
+) => {
   const { id } = req.params;
   const { body } = req;
 
@@ -23,7 +30,10 @@ const updateArticleController = async (req: any, res: any) => {
   res.status(200).json(result);
 };
 
-const deleteArticleController = async (req: any, res: any) => {
+const deleteArticleController = async (
+  req: express.Request,
+  res: express.Response
+) => {
   const { id } = req.params;
 
   const result = await deleteArticleService(id);
@@ -31,14 +41,20 @@ const deleteArticleController = async (req: any, res: any) => {
   res.status(200).json(result);
 };
 
-const getArticlesAllController = async (req: any, res: any) => {
+const getArticlesAllController = async (
+  req: express.Request,
+  res: express.Response
+) => {
   const { query } = req;
   const result = await getArticlesAllService(query);
 
   res.status(200).json(result);
 };
 
-const getArticleByIdController = async (req: any, res: any) => {
+const getArticleByIdController = async (
+  req: express.Request,
+  res: express.Response
+) => {
   const { id } = req.params;
 
   const result = await getArticleByIdService(id);
