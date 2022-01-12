@@ -1,12 +1,12 @@
 const { MongoClient } = require('mongodb');
+require('dotenv/config');
 
 const OPTIONS = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
 
-const MONGO_DB_URI =
-  'mongodb+srv://rafael:62178177@cluster0.bnjov.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const MONGO_DB_URI = `mongodb+srv://rafael:${process.env.PASSWORD_MONGODB_CLOUD}@cluster0.bnjov.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 let db: any = null;
 
