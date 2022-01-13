@@ -41,6 +41,8 @@ Challenge2021-SFN is a public API with articles related to spaceflight, integrat
 - nodemon
 - ts-node
 - tslint
+- nodemailer
+- nodemailer-smtp-transport
 
 ### Database
 
@@ -60,6 +62,10 @@ Challenge2021-SFN is a public API with articles related to spaceflight, integrat
 ### For TESTS
 
 - yarn test
+
+## Documentation - Swagger
+
+https://app.swaggerhub.com/apis-docs/RafaelBiatoAzevedo/Challenge2021-SFN/1.0.0#/
 
 
 ----------
