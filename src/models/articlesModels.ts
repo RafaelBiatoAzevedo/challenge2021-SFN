@@ -54,6 +54,8 @@ const deleteArticle = async (articleId: string) => {
     db.collection('articles').deleteOne({ _id: new ObjectId(articleId) })
   );
 
+  if (result.deletedCount === 0) return null;
+
   return result;
 };
 

@@ -4,10 +4,17 @@ const CronJob = require('cron').CronJob;
 const loadingData = require('../models/loadingData');
 const updateArticlesDaily = require('../models/cronUpdate9AM');
 const PORT = process.env.PORT || 3000;
+const sendMail = require('../nodemailer/sendMailFailSync');
 
 const job = new CronJob(
   '0 0 9 * * *',
-  () => updateArticlesDaily(),
+  () => {
+    try {
+      updateArticlesDaily();
+    } catch (error) {
+      sendMail();
+    }
+  },
   null,
   true,
   'America/Sao_Paulo'
