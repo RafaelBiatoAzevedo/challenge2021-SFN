@@ -18,7 +18,7 @@ describe('PUT /articles/:id', () => {
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   };
 
   before(async () => {
@@ -43,7 +43,10 @@ describe('PUT /articles/:id', () => {
     const invalidId: string = '12345678';
 
     beforeEach(async () => {
-      response = await chai.request(server).put(`/articles/${invalidId}`);
+      response = await chai
+        .request(server)
+        .put(`/articles/${invalidId}`)
+        .send(articleMock);
     });
 
     it('Return code status 404', () => {
@@ -72,7 +75,7 @@ describe('PUT /articles/:id', () => {
       newsSite: 'News teste',
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-      sumary: 'test mock',
+      summary: 'test mock',
     };
 
     beforeEach(async () => {
@@ -112,6 +115,7 @@ describe('PUT /articles/:id', () => {
     const articleUpdateMock = {
       title: 'Update test mock in mongoMemory',
       newsSite: 'Update News test',
+      summary: 'Update Test',
     };
 
     beforeEach(async () => {
@@ -134,14 +138,14 @@ describe('PUT /articles/:id', () => {
       expect(response.body).to.be.a('object');
     });
 
-    it('Object have properties "_id", "title", "featured", "url", "imageUrl", "newsSite","sumary", "publishedAt", "updatedAt", "launches" and "events" ', async () => {
+    it('Object have properties "_id", "title", "featured", "url", "imageUrl", "newsSite","summary", "publishedAt", "updatedAt", "launches" and "events" ', async () => {
       expect(response.body).to.have.property('_id');
       expect(response.body).to.have.property('title');
       expect(response.body).to.have.property('featured');
       expect(response.body).to.have.property('url');
       expect(response.body).to.have.property('imageUrl');
       expect(response.body).to.have.property('newsSite');
-      expect(response.body).to.have.property('sumary');
+      expect(response.body).to.have.property('summary');
       expect(response.body).to.have.property('publishedAt');
       expect(response.body).to.have.property('updatedAt');
       expect(response.body).to.have.property('launches');
@@ -164,8 +168,8 @@ describe('PUT /articles/:id', () => {
       expect(response.body.newsSite).to.be.equal(articleUpdateMock.newsSite);
     });
 
-    it(`The property "sumary" is equal "${articleMock.sumary}"`, () => {
-      expect(response.body.sumary).to.be.equal(articleMock.sumary);
+    it(`The property "summary" is equal "${articleUpdateMock.summary}"`, () => {
+      expect(response.body.summary).to.be.equal(articleUpdateMock.summary);
     });
   });
 });

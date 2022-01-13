@@ -19,7 +19,7 @@ const schema = Joi.object({
   url: Joi.string(),
   imageUrl: Joi.string(),
   newsSite: Joi.string(),
-  sumary: Joi.string().required(),
+  summary: Joi.string().required(),
   publishedAt: Joi.date(),
   updatedAt: Joi.date(),
   launches: Joi.array(),
