@@ -63,6 +63,10 @@ Challenge2021-SFN is a public API with articles related to spaceflight, integrat
 
 - yarn test
 
+## Project presentation
+
+https://www.loom.com/embed/8a37a2ca94594f3fa0ac60001fa66de3
+
 ## Documentation - Swagger
 
 https://app.swaggerhub.com/apis-docs/RafaelBiatoAzevedo/Challenge2021-SFN/1.0.0
