@@ -15,11 +15,11 @@ const {
 const schema = Joi.object({
   _id: Joi.string(),
   featured: Joi.boolean(),
-  title: Joi.string(),
+  title: Joi.string().required(),
   url: Joi.string(),
   imageUrl: Joi.string(),
   newsSite: Joi.string(),
-  sumary: Joi.string(),
+  sumary: Joi.string().required(),
   publishedAt: Joi.date(),
   updatedAt: Joi.date(),
   launches: Joi.array(),
