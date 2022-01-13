@@ -5,7 +5,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -13,7 +13,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -21,7 +21,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -29,7 +29,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -37,7 +37,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -45,7 +45,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -53,7 +53,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -61,7 +61,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -69,7 +69,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -77,7 +77,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -85,7 +85,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -93,7 +93,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -101,7 +101,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -109,7 +109,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -117,7 +117,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -125,7 +125,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -133,7 +133,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -141,7 +141,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -149,7 +149,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -157,7 +157,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -165,7 +165,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -173,7 +173,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -181,7 +181,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -189,7 +189,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -197,7 +197,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -205,7 +205,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -213,7 +213,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -221,7 +221,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -229,7 +229,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -237,7 +237,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -245,7 +245,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -253,7 +253,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -261,7 +261,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -269,7 +269,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -277,7 +277,7 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
   {
     title: 'test mock in mongoMemory',
@@ -285,6 +285,6 @@ export const articlesMock = [
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   },
 ];

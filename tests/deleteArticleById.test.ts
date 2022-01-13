@@ -35,7 +35,7 @@ describe('DELETE /articles/:id', () => {
     newsSite: 'News teste',
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
-    sumary: 'test mock',
+    summary: 'test mock',
   };
 
   describe('When id not exists in database', () => {
@@ -65,11 +65,6 @@ describe('DELETE /articles/:id', () => {
 
   describe('When id exists in database', () => {
     let response: express.Request;
-
-    const articleUpdateMock = {
-      title: 'Update test mock in mongoMemory',
-      newsSite: 'Update News test',
-    };
 
     beforeEach(async () => {
       const { body } = await chai

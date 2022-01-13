@@ -11,7 +11,7 @@ export type TArticle = {
   url: string;
   imageUrl: string;
   newsSite: string;
-  sumary: string;
+  summary: string;
   publishedAt: string;
   updatedAt: string;
   launches: TPatternValue[];
